@@ -1,10 +1,9 @@
 # [My Configs]
 
 My files config for several linux'program, just now be these:
-* **Qtile.
-* **Neovim.
-* **Alacritty.
-
+* Qtile.
+* Neovim.
+* Alacritty.
 
 ## Installation
 
@@ -18,7 +17,7 @@ Just you create symbolic link in folder required or copy file. If path or file d
 ### Alacritty
 * alacritty.yml: In ~/.config/alacritty/alacritty.yml
 
-###Qtile
+### Qtile
 
 Some shortcuts not will not work if you don't install the same programs. You can custom it.  
 

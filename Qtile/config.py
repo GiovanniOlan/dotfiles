@@ -107,7 +107,7 @@ keys = [
     
 
     #My shortcuts
-    Key([mod], "z", lazy.spawn("rofi -show run"), desc="Launch Rofi"),
+    Key([mod], "x", lazy.spawn("rofi -show run"), desc="Launch Rofi"),
     Key([mod], "b", lazy.spawn("brave-browser"), desc="Launch brave"),
     Key([mod], "c", lazy.spawn("code"), desc="Launch code"),
 ]

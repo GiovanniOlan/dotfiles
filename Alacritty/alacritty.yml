@@ -1,12 +1,12 @@
 # Window Customization
 window:
-  opacity: .7
+  opacity: 0.5
   dimensions:
     columns: 140
     lines: 38
   padding:
-    x: 35
-    y: 35
+    x: 0
+    y: 0
   decorations: full #Still won't show in a window manger, but will in a desktop environment
 scrolling:
   history: 10000
@@ -24,7 +24,7 @@ font:
   italic:
     family: Anonymice NF
     style: Italic
-  size: 10
+  size: 17
   offset:
     x: 0
     y: 0

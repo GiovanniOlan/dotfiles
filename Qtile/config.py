@@ -29,8 +29,41 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
+import os
+
 mod = "mod4"
 terminal = guess_terminal()
+
+color = {
+    'white' : '#ffffff',
+    'black' : '#000000',
+    'blue'  : '#8eb3ed',
+    'red'   : '#ed3e3e',
+    'morado': '#ab04cc',
+}
+FONT_SIZE = 20
+
+def draw_medium_circle(tipo, _bg):
+    icono = ""
+    if tipo==1:
+        icono = ""
+    else:
+        icono = ""
+    
+    return widget.TextBox(
+        text       = icono, 
+        fontsize   = FONT_SIZE+10,
+        foreground = _bg,
+        padding    = 0,
+    )
+
+def insert_text(text, _bg, _foreground, _fontsize):    
+    return widget.TextBox(
+        text       = text, 
+        fontsize   = _fontsize,
+        background = _bg,
+        foreground = _foreground,
+    )
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -79,24 +112,27 @@ keys = [
     Key([mod], "c", lazy.spawn("code"), desc="Launch code"),
 ]
 
-groups = [Group(i) for i in "123456789"]
+groups = [Group(i) for i in [
+    "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ",  
+]]
 
-for i in groups:
+for i,group in enumerate(groups):
+    numeroEscritorio = str(i+1)
     keys.extend(
         [
             # mod1 + letter of group = switch to group
             Key(
                 [mod],
-                i.name,
-                lazy.group[i.name].toscreen(),
-                desc="Switch to group {}".format(i.name),
+                numeroEscritorio,
+                lazy.group[group.name].toscreen(),
+                desc="Switch to group {}".format(group.name),
             ),
             # mod1 + shift + letter of group = switch to & move focused window to group
             Key(
                 [mod, "shift"],
-                i.name,
-                lazy.window.togroup(i.name, switch_group=True),
-                desc="Switch to & move focused window to group {}".format(i.name),
+                numeroEscritorio,
+                lazy.window.togroup(group.name, switch_group=True),
+                desc="Switch to & move focused window to group {}".format(group.name),
             ),
             # Or, use below if you prefer not to switch to that group.
             # # mod1 + shift + letter of group = move focused window to group
@@ -106,7 +142,10 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    layout.Columns(
+        border_focus= color['white'], 
+        border_width=1
+    ),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
@@ -130,28 +169,88 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
+                insert_text(" ", color['black'], color['black'], FONT_SIZE+10),
+
+                #widget.CurrentLayout(),
+                draw_medium_circle(0, color['white']),
+                widget.GroupBox(
+                    inactive = color['black'],
+                    active = color['morado'],
+                    background = color["white"],
+                    fontsize   = FONT_SIZE + 10,
+                    foreground = color["black"],
+                    padding    = 15,
+                    highlight_method='line',
+                    highlight_color = [color['blue'],color['blue']],
+                    other_screen_border = color['morado'], 
+                    other_current_screen_border = color['blue'],
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
+                draw_medium_circle(1, color['white']),
+                #widget.Prompt(),
+                insert_text(" ", color['black'], color['black'], FONT_SIZE+10),
+
+                draw_medium_circle(0, color['white']),
+                insert_text("  ", color['white'], color['morado'], FONT_SIZE+10),
+                widget.WindowName(
+                    background = color['white'],
+                    fontsize   = FONT_SIZE-8,
+                    foreground = color['black'],
+
+                ),
+                draw_medium_circle(1, color['white']),
+                insert_text(" ", color['black'], color['black'], FONT_SIZE+10),
+
+
+                #widget.Chord(
+                #    chords_colors={
+                #        "launch": ("#ff0000", "#ffffff"),
+                #    },
+                #    name_transform=lambda name: name.upper(),
+                #),
+                #widget.TextBox("default config", name="default"),
+                #widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
-                widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.QuickExit(),
+                #widget.Systray(),
+                draw_medium_circle(0, color['white']),
+                insert_text("  ", color['white'], color['morado'],FONT_SIZE),
+                widget.CPU(
+                    background = color['white'],
+                    foreground = color['black'],
+                ),
+                insert_text(" 直 ", color['white'], color['morado'], FONT_SIZE+10),
+                widget.Net(
+                    foreground = color['black'],
+                    background = color['white'],
+                    prefix     = 'M',
+                    format     = '{down}',
+                ),
+                draw_medium_circle(1, color['white']),
+
+                insert_text(" ", color['black'], color['black'], FONT_SIZE+10),
+
+
+                draw_medium_circle(0, color['white']),
+                insert_text("  ", color['white'], color['morado'],FONT_SIZE+10),
+                widget.Clock(
+                    font = "Anonymice NF",
+                    format="%a %I:%M%p %d-%m-%Y",
+                    background = color['white'],
+                    foreground = color['black'],
+                    fontsize = FONT_SIZE-5,
+                    padding = 5, 
+                ),
+                draw_medium_circle(1, color['white']),
+
+                insert_text(" ", color['black'], color['black'], FONT_SIZE+10),
+
+
+                #widget.QuickExit(),
             ],
             24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+            border_width=[15, 0, 15, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
     ),
@@ -201,3 +300,14 @@ wl_input_rules = None
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+
+autostart = [
+
+    "feh --bg-fill ~/MyProgramsConfig/Qtile/wallpaper/debian-neofetch.png",  
+    "picom --no-vsync &",
+]
+
+for x in autostart:
+    os.system(x)
+
+

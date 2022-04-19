@@ -305,6 +305,7 @@ autostart = [
 
     "feh --bg-fill ~/MyProgramsConfig/Qtile/wallpaper/debian-neofetch.png",  
     "picom --no-vsync &",
+    "setxkbmap us"
 ]
 
 for x in autostart:

@@ -110,6 +110,8 @@ keys = [
     Key([mod], "x", lazy.spawn("rofi -show run"), desc="Launch Rofi"),
     Key([mod], "b", lazy.spawn("brave-browser"), desc="Launch brave"),
     Key([mod], "c", lazy.spawn("code"), desc="Launch code"),
+    Key([mod], "p", lazy.spawn("pavucontrol"), desc="Launch PavoControl"),
+    Key([mod], "s", lazy.spawn("gnome-screenshot -i"), desc="Take ScreenShoot"),
 ]
 
 groups = [Group(i) for i in [
@@ -305,7 +307,9 @@ autostart = [
 
     "feh --bg-fill ~/MyProgramsConfig/Qtile/wallpaper/debian-neofetch.png",  
     "picom --no-vsync &",
-    "setxkbmap us"
+    "setxkbmap -layout us -variant intl",
+    'export PATH="/home/debian-gio/miniconda3/bin:$PATH"',
+    'source ~/miniconda3/etc/profile.d/conda.sh',
 ]
 
 for x in autostart:

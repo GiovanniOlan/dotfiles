@@ -305,7 +305,7 @@ wmname = "LG3D"
 
 autostart = [
 
-    "feh --bg-fill ~/MyProgramsConfig/Qtile/wallpaper/debian-neofetch.png",  
+    "feh --bg-fill ~/my-configs-linux/Qtile/wallpaper/debian-neofetch.png",  
     "picom --no-vsync &",
     "setxkbmap -layout us -variant intl",
     'export PATH="/home/debian-gio/miniconda3/bin:$PATH"',

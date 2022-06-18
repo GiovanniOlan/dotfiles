@@ -108,7 +108,7 @@ keys = [
 
     #My shortcuts
     Key([mod], "x", lazy.spawn("rofi -show run"), desc="Launch Rofi"),
-    Key([mod], "b", lazy.spawn("brave-browser"), desc="Launch brave"),
+    Key([mod], "b", lazy.spawn("brave"), desc="Launch brave"),
     Key([mod], "c", lazy.spawn("code"), desc="Launch code"),
     Key([mod], "p", lazy.spawn("pavucontrol"), desc="Launch PavoControl"),
     Key([mod], "s", lazy.spawn("gnome-screenshot -i"), desc="Take ScreenShoot"),

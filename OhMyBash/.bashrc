@@ -117,11 +117,21 @@ source "$OSH"/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 alias v="nvim"
-alias upd="sudo apt update"
-alias ins="sudo apt install"
+#alias upd="sudo apt update"
+alias upd="sudo pacman -Syu"
+#alias ins="sudo apt install"
+alias ins="sudo pacman -S --noconfirm"
 alias cat="batcat"
 alias ls="lsd"
 alias ll="lsd -la"
 alias off="sudo shutdown now"
 alias reboot="sudo reboot now"
+#GIT
+alias gadd="git add "
+alias gcom="git commit -m "
+alias gpush="git push origin "
+alias gpu="git pull"
+
+alias hora="sudo ntpd -qg"
+
 export PATH="$PATH:/usr/bin/Postman"

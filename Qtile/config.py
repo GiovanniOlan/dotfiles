@@ -115,7 +115,7 @@ keys = [
 ]
 
 groups = [Group(i) for i in [
-    "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ",  
+    "  ", "  ", "  ", "  ", "  ", "  ", " 雷 ", "  ", "  ",  
 ]]
 
 for i,group in enumerate(groups):
@@ -181,7 +181,7 @@ screens = [
                     inactive = color['black'],
                     active = color['morado'],
                     background = color["white"],
-                    fontsize   = FONT_SIZE + 10,
+                    fontsize   = FONT_SIZE+5,
                     foreground = color["black"],
                     padding    = 15,
                     highlight_method='line',
@@ -194,7 +194,7 @@ screens = [
                 insert_text(" ", color['black'], color['black'], FONT_SIZE+10),
 
                 draw_medium_circle(0, color['white']),
-                insert_text("  ", color['white'], color['morado'], FONT_SIZE+10),
+                insert_text("  ", color['white'], color['morado'], FONT_SIZE),
                 widget.WindowName(
                     background = color['white'],
                     fontsize   = FONT_SIZE-8,
@@ -202,7 +202,7 @@ screens = [
 
                 ),
                 draw_medium_circle(1, color['white']),
-                insert_text(" ", color['black'], color['black'], FONT_SIZE+10),
+                insert_text(" ", color['black'], color['black'], FONT_SIZE),
 
 
                 #widget.Chord(
@@ -235,7 +235,7 @@ screens = [
 
 
                 draw_medium_circle(0, color['white']),
-                insert_text("  ", color['white'], color['morado'],FONT_SIZE+10),
+                insert_text("  ", color['white'], color['morado'],FONT_SIZE),
                 widget.Clock(
                     font = "Anonymice NF",
                     format="%a %I:%M%p %d-%m-%Y",
@@ -305,7 +305,7 @@ wmname = "LG3D"
 
 autostart = [
 
-    "feh --bg-fill ~/my-configs-linux/Qtile/wallpaper/debian-neofetch.png",  
+    "feh --bg-fill ~/my-configs-linux/Qtile/wallpaper/archlinux-wallpaper.jpg",  
     "picom --no-vsync &",
     "setxkbmap -layout us -variant intl",
     'export PATH="/home/debian-gio/miniconda3/bin:$PATH"',

@@ -172,7 +172,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        top=bar.Bar(
+        bottom=bar.Bar(
             [
                 insert_text(" ", color['black'], color['black'], FONT_SIZE+10),
 
@@ -253,7 +253,7 @@ screens = [
                 #widget.QuickExit(),
             ],
             24,
-            border_width=[15, 0, 15, 0],  # Draw top and bottom borders
+            border_width=[10, 0, 10, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
     ),

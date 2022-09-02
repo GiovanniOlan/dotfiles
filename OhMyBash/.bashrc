@@ -118,9 +118,10 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 alias v="nvim"
 #alias upd="sudo apt update"
-alias upd="sudo pacman -Syu"
+alias upd="sudo pacman -Syyu --noconfirm"
 #alias ins="sudo apt install"
 alias ins="sudo pacman -S --noconfirm"
+alias remove="sudo pacman -Rsn --noconfirm"
 alias cat="batcat"
 alias ls="lsd"
 alias ll="lsd -la"
@@ -130,8 +131,11 @@ alias reboot="sudo reboot now"
 alias gadd="git add "
 alias gcom="git commit -m "
 alias gpush="git push origin "
-alias gpu="git pull"
+alias gpull="git pull "
+alias gstatus="git status "
 
 alias hora="sudo ntpd -qg"
 
 export PATH="$PATH:/usr/bin/Postman"
+export EDITOR=nvim
+export EDITOR=nvim

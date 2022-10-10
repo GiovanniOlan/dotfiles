@@ -116,17 +116,25 @@ source "$OSH"/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
-alias v="nvim"
 #alias upd="sudo apt update"
-alias upd="sudo pacman -Syyu --noconfirm"
 #alias ins="sudo apt install"
-alias ins="sudo pacman -S --noconfirm"
-alias remove="sudo pacman -Rsn --noconfirm"
+
+
+#All operating systems
 alias cat="batcat"
 alias ls="lsd"
-alias ll="lsd -la"
 alias off="sudo shutdown now"
 alias reboot="sudo reboot now"
+alias ll="lsd -la"
+alias v="nvim"
+
+#ArchLinux System
+alias pingg="ping 8.8.8.8" #Do ping to Google's DNS
+alias upd="sudo pacman -Syyu --noconfirm" #Update System
+alias remove="sudo pacman -Rsn --noconfirm" #Delete all program's dependencies and data
+alias ins="sudo pacman -S --noconfirm" #Install program without confirmation
+alias ins="sudo pacman -S --noconfirm" #Install program with confirmation
+
 #GIT
 alias gadd="git add "
 alias gcom="git commit -m "

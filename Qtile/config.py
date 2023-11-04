@@ -111,12 +111,15 @@ keys = [
     Key([mod], "b", lazy.spawn("brave"), desc="Launch brave"),
     Key([mod], "c", lazy.spawn("code"), desc="Launch code"),
     Key([mod], "p", lazy.spawn("pavucontrol"), desc="Launch PavoControl"),
-    Key([mod], "s", lazy.spawn("gnome-screenshot -i"), desc="Take ScreenShoot"),
+    # Key([mod], "s", lazy.spawn("gnome-screenshot -i"), desc="Take ScreenShoot"),
+    Key([mod], "s", lazy.spawn("scrot -s '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'"), desc="Take ScreenShoot"),
+    Key([mod, 'shift'], "s", lazy.spawn("gnome-screenshot -i"), desc="Take ScreenShoot"),
+
 ]
 
 groups = [Group(i) for i in [
-    #"  ", "  ", "  ", "  ", "  ", "  ", " 雷 ", "  ", "  ",  
-    "  ", "  ", "  ", "  ", "  ", "  ",  
+    "  ", "  ", "  ", "  ", "  ", "  ", " 雷 ", "  ", "  ",  
+    # "  ", "  ", "  ", "  ", "  ", "  ", " 雷 " 
 ]]
 
 for i,group in enumerate(groups):

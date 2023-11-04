@@ -127,6 +127,7 @@ alias off="sudo shutdown now"
 alias reboot="sudo reboot now"
 alias ll="lsd -la"
 alias v="nvim"
+alias all-is-mine="sudo chown -R g10:g10 ."
 
 #ArchLinux System
 alias pingg="ping 8.8.8.8" #Do ping to Google's DNS
@@ -134,6 +135,19 @@ alias upd="sudo pacman -Syyu --noconfirm" #Update System
 alias remove="sudo pacman -Rsn --noconfirm" #Delete all program's dependencies and data
 alias ins="sudo pacman -S --noconfirm" #Install program without confirmation
 alias ins="sudo pacman -S --noconfirm" #Install program with confirmation
+alias hora="sudo ntpd -qg"
+
+#Laravel
+alias sail="./vendor/bin/sail" #Es para levantar el entorno de desarrollo en docker.
+
+#Django
+alias django-up="docker compose down && docker-compose up"
+alias django-up-b="docker compose down && docker-compose up --build"
+alias django-down="docker-compose down"
+alias django-exec="docker-compose exec -it web"
+
+#PostgreSQL
+alias postgres-exec="docker-compose exec -it db"
 
 #GIT
 alias gadd="git add "
@@ -142,7 +156,6 @@ alias gpush="git push origin "
 alias gpull="git pull "
 alias gstatus="git status "
 
-alias hora="sudo ntpd -qg"
 
 export PATH="$PATH:/usr/bin/Postman"
 export EDITOR=nvim

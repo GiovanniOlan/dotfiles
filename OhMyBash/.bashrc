@@ -127,7 +127,7 @@ alias off="sudo shutdown now"
 alias reboot="sudo reboot now"
 alias ll="lsd -la"
 alias v="nvim"
-alias all-is-mine="sudo chown -R g10:g10 ."
+alias all-is-mine="sudo chown -R $USER:$USER ."
 
 #ArchLinux System
 alias pingg="ping 8.8.8.8" #Do ping to Google's DNS
@@ -145,6 +145,7 @@ alias django-up="docker compose down && docker-compose up"
 alias django-up-b="docker compose down && docker-compose up --build"
 alias django-down="docker-compose down"
 alias django-exec="docker-compose exec -it web"
+alias django-exec-manage="docker-compose exec -it web python manage.py"
 
 #PostgreSQL
 alias postgres-exec="docker-compose exec -it db"
@@ -160,3 +161,8 @@ alias gstatus="git status "
 export PATH="$PATH:/usr/bin/Postman"
 export EDITOR=nvim
 export EDITOR=nvim
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

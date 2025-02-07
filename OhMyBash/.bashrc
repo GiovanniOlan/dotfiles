@@ -141,14 +141,16 @@ alias hora="sudo ntpd -qg"
 alias sail="./vendor/bin/sail" #Es para levantar el entorno de desarrollo en docker.
 
 #Django
-alias django-up="docker compose down && docker-compose up"
-alias django-up-b="docker compose down && docker-compose up --build"
-alias django-down="docker-compose down"
-alias django-exec="docker-compose exec -it web"
-alias django-exec-manage="docker-compose exec -it web python manage.py"
+#alias django-up="docker compose down && docker-compose up"
+#alias django-up-b="docker compose down && docker-compose up --build"
+#alias django-down="docker-compose down"
+#alias django-exec="docker-compose exec -it web"
+#alias django-exec-manage="docker-compose exec -it web python manage.py"
 
-#PostgreSQL
-alias postgres-exec="docker-compose exec -it db"
+#Development with docker
+alias dockcomp-localdev="docker-compose -f docker-compose-local.yml exec -it"
+alias dockcomp-localdev-django="docker-compose -f docker-compose-local.yml exec -it django python manage.py"
+
 
 #GIT
 alias gadd="git add "

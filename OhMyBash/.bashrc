@@ -148,9 +148,17 @@ alias sail="./vendor/bin/sail" #Es para levantar el entorno de desarrollo en doc
 #alias django-exec-manage="docker-compose exec -it web python manage.py"
 
 #Development with docker
+
 alias dockcomp-localdev="docker-compose -f docker-compose-local.yml exec -it"
 alias dockcomp-localdev-django="docker-compose -f docker-compose-local.yml exec -it django python manage.py"
 
+alias dockcomp-dev="docker-compose -f docker/dev/docker-compose.yml"
+alias dockcomp-dev-exec="docker-compose -f docker/dev/docker-compose.yml exec -it"
+alias dockcomp-dev-exec-django="docker-compose -f docker/dev/docker-compose.yml exec -it django python manage.py"
+
+alias dockcomp-local="docker-compose -f docker/local/docker-compose.yml"
+alias dockcomp-local-exec="docker-compose -f docker/local/docker-compose.yml exec -it"
+alias dockcomp-local-exec-django="docker-compose -f docker/local/docker-compose.yml exec -it django python manage.py"
 
 #GIT
 alias gadd="git add "

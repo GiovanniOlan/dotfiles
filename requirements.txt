@@ -1,0 +1,9 @@
+hyprland
+waybar
+fastfetch
+yay (aur)
+brave (aur)
+code (aur)
+pcmanfm 
+pavucontrol
+rofi

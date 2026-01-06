@@ -1,0 +1,5 @@
+hyprland
+terminal: kitty | alacritty | other
+rofi
+terminal: kitty | alacritty | other
+waybar

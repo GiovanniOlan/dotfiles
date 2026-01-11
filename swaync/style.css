@@ -1,0 +1,368 @@
+/* ========== CATPPUCCIN MOCHA THEME ========== */
+* {
+  all: unset;
+  font-family: JetBrains Mono, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* ========== NOTIFICATION WINDOW ========== */
+.notification {
+  background: #1e1e2e;
+  border: 1px solid #313244;
+  border-radius: 12px;
+  margin: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.notification-content {
+  padding: 8px;
+}
+
+.notification-default-action {
+  border-radius: 12px;
+}
+
+.notification-default-action:hover {
+  background: rgba(137, 180, 250, 0.1);
+}
+
+/* Notification title and body */
+.summary {
+  color: #cdd6f4;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.body {
+  color: #bac2de;
+  font-size: 13px;
+}
+
+.time {
+  color: #6c7086;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Notification icons */
+.notification-icon {
+  margin-right: 12px;
+  border-radius: 8px;
+}
+
+.app-icon {
+  margin-right: 8px;
+}
+
+/* Close button */
+.close-button {
+  background: #313244;
+  color: #cdd6f4;
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin: 4px;
+}
+
+.close-button:hover {
+  background: #f38ba8;
+  color: #1e1e2e;
+}
+
+/* ========== URGENCY LEVELS ========== */
+.low {
+  border: 1px solid #313244;
+}
+
+.normal {
+  border: 1px solid #89b4fa;
+}
+
+.critical {
+  border: 2px solid #f38ba8;
+  background: rgba(243, 139, 168, 0.1);
+}
+
+.critical .notification-content {
+  color: #f38ba8;
+}
+
+/* ========== CONTROL CENTER ========== */
+.control-center {
+  background: #1e1e2e;
+  border: 1px solid #313244;
+  border-radius: 12px;
+  margin: 10px;
+  padding: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.control-center-list-placeholder {
+  color: #6c7086;
+  font-size: 16px;
+  padding: 20px;
+}
+
+/* Scroll container */
+.notification-row {
+  margin: 4px 0;
+  border-radius: 12px;
+  background: transparent;
+  transition: background 0.2s ease;
+}
+
+.notification-row:hover {
+  background: rgba(49, 50, 68, 0.5);
+}
+
+/* ========== WIDGETS ========== */
+
+/* Widget Title */
+.widget-title {
+  background: transparent;
+  color: #cdd6f4;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.widget-title > button {
+  background: #89b4fa;
+  color: #1e1e2e;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.widget-title > button:hover {
+  background: #74c7ec;
+}
+
+/* Widget DND (Do Not Disturb) */
+.widget-dnd {
+  background: #313244;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 8px 0;
+}
+
+.widget-dnd > label {
+  color: #cdd6f4;
+  font-weight: 500;
+}
+
+.widget-dnd > switch {
+  background: #45475a;
+  border-radius: 16px;
+  min-width: 48px;
+  min-height: 24px;
+}
+
+.widget-dnd > switch:checked {
+  background: linear-gradient(135deg, #89b4fa 0%, #74c7ec 100%);
+}
+
+.widget-dnd > switch slider {
+  background: #cdd6f4;
+  border-radius: 50%;
+}
+
+/* Widget MPRIS (Media Player) */
+.widget-mpris {
+  background: #313244;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 8px 0;
+}
+
+.widget-mpris-player {
+  background: transparent;
+  padding: 8px;
+}
+
+.widget-mpris-title {
+  color: #cdd6f4;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.widget-mpris-subtitle {
+  color: #bac2de;
+  font-size: 12px;
+}
+
+.widget-mpris > button {
+  background: #45475a;
+  color: #cdd6f4;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 2px;
+}
+
+.widget-mpris > button:hover {
+  background: #89b4fa;
+  color: #1e1e2e;
+}
+
+/* Widget Buttons Grid */
+.widget-buttons-grid {
+  background: transparent;
+  padding: 8px 0;
+  margin: 8px 0;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: #313244;
+  border: 1px solid #45475a;
+  border-radius: 10px;
+  color: #cdd6f4;
+  padding: 10px 16px;
+  margin: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: rgba(137, 180, 250, 0.2);
+  border-color: #89b4fa;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
+  background: linear-gradient(135deg, #89b4fa 0%, #74c7ec 100%);
+  border-color: #89b4fa;
+  color: #1e1e2e;
+  font-weight: bold;
+}
+
+/* Widget Volume */
+.widget-volume {
+  background: #313244;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 8px 0;
+}
+
+.widget-volume > box {
+  color: #cdd6f4;
+}
+
+.widget-volume scale {
+  min-height: 6px;
+  background: #45475a;
+  border-radius: 8px;
+}
+
+.widget-volume scale trough {
+  min-height: 6px;
+  background: #45475a;
+  border-radius: 8px;
+}
+
+.widget-volume scale highlight {
+  background: linear-gradient(135deg, #89b4fa 0%, #74c7ec 100%);
+  border-radius: 8px;
+}
+
+.widget-volume scale slider {
+  background: #cdd6f4;
+  border-radius: 50%;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+/* Widget Inhibitors */
+.widget-inhibitors {
+  background: #313244;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 8px 0;
+}
+
+.widget-inhibitors > button {
+  background: #45475a;
+  color: #cdd6f4;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.widget-inhibitors > button:hover {
+  background: #f38ba8;
+  color: #1e1e2e;
+}
+
+/* ========== MISC ========== */
+.blank-window {
+  background: transparent;
+}
+
+.floating-notifications {
+  background: transparent;
+}
+
+/* Action buttons in notifications */
+.notification-action {
+  background: #313244;
+  color: #cdd6f4;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin: 4px;
+  border: 1px solid #45475a;
+}
+
+.notification-action:hover {
+  background: #89b4fa;
+  color: #1e1e2e;
+  border-color: #89b4fa;
+}
+
+/* Grouped notifications */
+.notification-group {
+  margin: 4px 0;
+}
+
+.notification-group-headers {
+  background: #313244;
+  border-radius: 12px 12px 0 0;
+  padding: 8px 12px;
+  color: #cdd6f4;
+  font-weight: bold;
+}
+
+.notification-group-icon {
+  margin-right: 8px;
+}
+
+.notification-group-collapse-button {
+  background: #45475a;
+  color: #cdd6f4;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.notification-group-collapse-button:hover {
+  background: #89b4fa;
+  color: #1e1e2e;
+}
+
+/* ========== SCROLLBAR ========== */
+scrollbar {
+  background: transparent;
+  border-radius: 8px;
+}
+
+scrollbar slider {
+  background: #45475a;
+  border-radius: 8px;
+  min-width: 8px;
+}
+
+scrollbar slider:hover {
+  background: #6c7086;
+}

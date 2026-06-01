@@ -16,7 +16,7 @@ sleep 2
 
 # Workspace 4
 hyprctl dispatch workspace 4
-brave --new-window https://mail.google.com/mail/u/0/#inbox https://mail.google.com/mail/u/1/#inbox &
+brave --new-window https://calendar.google.com/calendar/u/0/r?pli=1 https://mail.google.com/mail/u/0/#inbox https://mail.google.com/mail/u/1/#inbox &
 sleep 2
 
 # Workspace 5
